@@ -18,7 +18,7 @@ public class Q1Part2 {
                 writer.println(response);
             }
 
-            // Close the scanner and writer
+            // Closing the scanner and writer
             scanner.close();
             writer.close();
             
