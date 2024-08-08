@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.telusko.JobApp.model.JobPost" %>
+<%@ page import="com.beehyv.JobApp2.model.JobPost" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page isELIgnored="false" %>
 <!DOCTYPE html>
@@ -51,6 +51,10 @@
         </div>
     </div>
 </nav>
+
+<%
+    JobPost myJobPost = (JobPost) request.getAttribute("jobPost");
+%>
 
 <div class="container mt-5">
     <h2 class="mb-4 text-center font-weight-bold">Job Post Details</h2>

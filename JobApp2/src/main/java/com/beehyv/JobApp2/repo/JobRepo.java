@@ -1,6 +1,6 @@
 package com.beehyv.JobApp2.repo;
 
-import com.beehyv.jobapp.model.JobPost;
+import com.beehyv.JobApp2.model.JobPost;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

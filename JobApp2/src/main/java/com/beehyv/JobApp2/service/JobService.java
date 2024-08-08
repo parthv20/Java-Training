@@ -1,7 +1,7 @@
 package com.beehyv.JobApp2.service;
 
-import com.beehyv.jobapp.model.JobPost;
-import com.beehyv.jobapp.repo.JobRepo;
+import com.beehyv.JobApp2.model.JobPost;
+import com.beehyv.JobApp2.repo.JobRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

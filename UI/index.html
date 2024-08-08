@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <div class="logo-container">
+                <img src="icon.svg" alt="Logo" class="logo">
+                <h1>PATTERNFLY</h1>
+            </div>
+            <p>This is placeholder text, only. Use this area to place any information or introductory message about your application that may be relevant for users.</p>
+        </header>
+        <div class="login-box">
+            <div class="login-header">
+                <h2 class="logtext">Log In to Your Account</h2>
+                <select class="language-select">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+            <form onsubmit="return validateForm()"> 
+                <input type="text" id="username" name="username" placeholder="Email or phone or username">
+                
+                <input type="password" id="password" name="password" placeholder="Password">
+                <div class="checkbox-container"> <input type="checkbox" name="remember" id="cb">
+                    <label for="remember" class="lab"> Keep me logged in for 30 days</label>
+                    <a href="#">Forgot password?</a>
+                </div> 
+                    <button type="submit">Log In</button>
+            </form>
+            <div class="signup-link">
+                <p>Need an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+        <footer>
+            <p>Terms of Use • Help • Privacy Policy</p>
+        </footer>
+    </div>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === "" || password === "") {
+                alert("Email or phone or username and Password cannot be empty");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
