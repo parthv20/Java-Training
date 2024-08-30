@@ -12,7 +12,7 @@ html {
   align-items: center;
   text-align: center;
   font-size: 16px;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .background {
@@ -195,6 +195,7 @@ li > a {
   color: white;
   text-decoration: none;
 }
+
 /* Media Queries */
 /* @media (max-width: 768px) {
   h1 {

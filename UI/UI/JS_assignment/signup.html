@@ -177,6 +177,15 @@
 
         userList.push(username);
         userPassword.push(password);
+        function saveDetails(){
+  const details=localStorage.getItem("userDetails");
+  if(details===null){
+    localStorage.setItem("userDetails",JSON.stringify(userDetails))
+    localStorage.setItem("userList",JSON.stringify(userList))
+    localStorage.setItem("userPassword",JSON.stringify(userPassword))
+  }
+}
+saveDetails()
 
         console.log(userDetails);
 

@@ -20,5 +20,195 @@ function validateForm() {
   <input type="submit" value="Submit">
 </form>
 
+<h1>JavaScript HTML Events</h1>
+<h2>The onmousedown Attribute</h2>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+
+
+<h2>JavaScript Window</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+</script>
+
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+
+
+<h2>JavaScript Timing</h2>
+
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+
+<button onclick="setTimeout(myFunction, 3000);">Try it</button>
+
+<script>
+function myFunction() {
+  alert('Hello');
+}
+</script>
+
+<h2>JavaScript Timing</h2>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+<script>
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+<h1>The Storage clear() Method</h1>
+
+<p>This example demonstrates how to use the clear() method to delete all the local storage items for this domain.</p>
+
+<h2>Missing localStorage items?</h2>
+
+<p>Since you might not have any items stored in your local storage, we have added a script that creates some for you.</p>
+
+<button onclick="createItems()">Create local storage items</button>
+
+<h2>Remove Items</h2>
+
+<p>Click the button to delete the items:</p>
+
+<button onclick="deleteItems()">Delete items</button>
+
+<h2>Display Items</h2>
+
+<p>Click the button to display all items:</p>
+
+<button onclick="displayItems()">Display items</button>
+
+<p id="demo"></p>
+
+<script>
+function createItems() {
+  localStorage.setItem("mytime", Date.now());
+  localStorage.setItem("myname", "John");
+  localStorage.setItem("myage", 36);
+}
+
+C
+
+function deleteItems() {
+  localStorage.clear();
+}
+
+function displayItems() {
+  var l, i;
+  document.getElementById("demo").innerHTML = "";
+  for (i = 0; i < localStorage.length; i++) {
+  x = localStorage.key(i);
+  document.getElementById("demo").innerHTML += x + "<br>";
+  }
+}
+</script>
+
+
+<h1>The Storage clear() Method</h1>
+
+<p>This example demonstrates how to use the clear() method to delete all session storage items for this domain.</p>
+
+<h2>Missing sessionStorage items?</h2>
+
+<p>Since you might not have any items stored in your session storage, we have added a script that creates some for you.</p>
+
+<button onclick="createItems()">Create session storage items</button>
+
+<h2>Remove Items</h2>
+
+<p>Click the button to delete the items:</p>
+
+<button onclick="deleteItems()">Delete items</button>
+
+<h2>Display Items</h2>
+
+<p>Click the button to display all items:</p>
+
+<button onclick="displayItems()">Display items</button>
+
+<p id="demo"></p>
+
+<script>
+function createItems() {
+  sessionStorage.setItem("mytime", Date.now());
+  sessionStorage.setItem("myname", "John");
+  sessionStorage.setItem("myage", 36);
+}
+
+function deleteItems() {
+  sessionStorage.clear();
+}
+
+function displayItems() {
+  var l, i;
+  document.getElementById("demo").innerHTML = "";
+  for (i = 0; i < sessionStorage.length; i++) {
+  x = sessionStorage.key(i);
+  document.getElementById("demo").innerHTML += x + "<br>";
+  }
+}
+</script>
+
+
 </body>
 </html>
