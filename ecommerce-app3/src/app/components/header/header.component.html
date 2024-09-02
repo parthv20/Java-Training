@@ -1,0 +1,20 @@
+<p>header works!</p>
+<header>
+    <nav>
+      <!-- Navigation Link to Products Page -->
+      <a routerLink="/products">Home</a>
+  
+      <!-- Cart Icon and Popup -->
+      <div class="cart-icon" (click)="toggleCartPopup()">
+        <span>{{ totalItems }}</span>
+        <i class="fa fa-shopping-cart"></i>
+        <div *ngIf="showCartPopup" class="cart-popup">
+          <div *ngFor="let item of cartService.getItems()">
+            <p>{{ item.title }} - {{ item.price | currency }}</p>
+          </div>
+          <p><strong>Total:</strong> {{ totalPrice | currency }}</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+  

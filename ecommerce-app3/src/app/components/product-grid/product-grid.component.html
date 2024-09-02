@@ -1,0 +1,13 @@
+<div class="product-grid">
+    <div *ngIf="products.length === 0" class="no-products">
+      <p>No products available.</p>
+    </div>
+    
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+      <h3 class="product-title">{{ product.title }}</h3>
+      <p class="product-price">{{ product.price | currency }}</p>
+      <button [routerLink]="['/products', product.id]" class="view-details-button">View Details</button>
+    </div>
+  </div>
+  
