@@ -18,7 +18,7 @@ public class JObRestController {
 
 
     @GetMapping("jobPosts")
-    @ResponseBody
+    @ResponseBody// not needed if restcontroller component is used
     public List<JobPost> getAllJobs() {
 
         return service.getAllJobs();
